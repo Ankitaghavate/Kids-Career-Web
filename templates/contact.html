@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e3f2fd;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 20px 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 500px;
+        }
+
+        h2 {
+            text-align: center;
+            color: rgb(114, 114, 114);
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+            margin-top: 5px;
+            width: 100%;
+        }
+
+        .input-group input,
+        .input-group textarea {
+            padding: 8px 10px;
+            border: 2px solid rgb(35, 34, 34);
+            border-radius: 10px;
+            font-size: 13px;
+            width: 100%;
+            transition: 0.3s;
+            text-align: left;
+        }
+
+        .input-group textarea {
+            height: 90px;
+        }
+
+        .input-group input:hover,
+        .input-group textarea:hover {
+            border-color: #007BFF;
+        }
+
+        .input-group input:focus,
+        .input-group textarea:focus {
+            border-color: #007BFF;
+            outline: none;
+        }
+
+        /* Remove placeholder text on focus */
+        .input-group input:focus::placeholder,
+        .input-group textarea:focus::placeholder {
+            color: transparent;
+        }
+
+        .input-group input::placeholder,
+        .input-group textarea::placeholder {
+            color: #777;
+            font-weight: normal;
+        }
+
+        input[type="submit"] {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 8px;
+            border: none;
+            border-radius: 10px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: 0.3s;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Contact Us</h2>
+        <form action="contact.php" method="post">
+            <div class="input-group">
+                <input type="text" id="name" name="name" placeholder="Enter Your Name" required>
+            </div>
+
+            <div class="input-group">
+                <input type="email" id="email" name="email" placeholder="Enter Your Email" required>
+            </div>
+
+            <div class="input-group">
+                <input type="text" id="subject" name="subject" placeholder="Enter Subject" required>
+            </div>
+
+            <div class="input-group">
+                <textarea id="message" name="message" placeholder="Enter Your Message" required></textarea>
+            </div>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+
+</html>

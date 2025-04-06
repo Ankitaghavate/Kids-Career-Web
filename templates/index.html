@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kids Career Guidence</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='src/css/home.css') }}">
+    <script src="{{ url_for('static', filename='src/js/index.js') }}" defer></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand ps-5" href="#">Kids Career Guidence</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <!-- Login and Sign Up Links on the Left -->
+                <ul class="navbar-nav ms-auto fs-5">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://127.0.0.1:9090/login">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://127.0.0.1:9090/sign_up">Sign Up</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://127.0.0.1:9090/chat">Chat With AI</a>
+                    </li>
+
+                    <li class="nav-item">
+
+                        <a class="nav-link" href="http://127.0.0.1:9090/career">Career Path</a>
+
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://127.0.0.1:9090/contact">Contact</a>
+                    </li>
+                </ul>
+                <!-- Search Bar on the Right -->
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Typing Animation -->
+    <div class="typing-text" id="typing-text"></div>
+
+    <!-- Main Content Section -->
+    <div class="content-container">
+        <div class="content-text mt-0">
+            <h2 class="fs-7 black-text garamond-text">Empowering children to explore their passions
+                Nurturing Futures</h2>
+            <h2 class="fs-7 ps-4 colored-text garamond-text"> and discover their potential career paths</h2>
+            <h2 class="fs-7 black-text">through engaging guidance and support.
+            </h2>
+            <!--  <button href="http://127.0.0.1:9090/contact" class="upload-btn">Book Now</button>-->
+        </div>
+        <img src="{{ url_for('static', filename='src/image/image2.webp') }}" alt="AI Technology" class="content-image">
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">
+                Designed and built with all the love in the world by the Kids Career Guidance team with the help of our
+                contributors.
+                <br>Code licensed <a href="#">MIT</a>, docs <a href="#">CC BY 3.0</a>.
+                <br>Currently v1.0.0.
+            </p>
+
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h5>Links</h5>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Docs</a></li>
+                        <li><a href="#">Examples</a></li>
+                        <li><a href="#">Icons</a></li>
+                        <li><a href="#">Themes</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Swag Store</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h5>Guides</h5>
+                    <ul>
+                        <li><a href="#">Getting Started</a></li>
+                        <li><a href="#">Starter Template</a></li>
+                        <li><a href="#">Webpack</a></li>
+                        <li><a href="#">Parcel</a></li>
+                        <li><a href="#">Vite</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h5>Projects</h5>
+                    <ul>
+                        <li><a href="#">Kids Career Guidance</a></li>
+                        <li><a href="#">Career Exploration Tools</a></li>
+                        <li><a href="#">Education Resources</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h5>Community</h5>
+                    <ul>
+                        <li><a href="#">Issues</a></li>
+                        <li><a href="#">Discussions</a></li>
+                        <li><a href="#">Corporate Sponsors</a></li>
+                        <li><a href="#">Stack Overflow</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Typing Animation
+        document.addEventListener("DOMContentLoaded", function () {
+            const messages = [
+                "Kids Career Guidance",
+                "Discover your passions...",
+                "Explore exciting careers...",
+                "Shape your future with confidence!"
+            ];
+
+            let currentIndex = 0;
+            const typingElement = document.getElementById("typing-text");
+
+            function typeMessage(index) {
+                let i = 0;
+                typingElement.innerHTML = "";
+                const message = messages[index];
+
+                function type() {
+                    if (i < message.length) {
+                        typingElement.innerHTML += message.charAt(i);
+                        i++;
+                        setTimeout(type, 100);
+                    } else {
+                        setTimeout(() => eraseMessage(index), 2000);
+                    }
+                }
+
+                type();
+            }
+
+            function eraseMessage(index) {
+                let i = messages[index].length;
+
+                function erase() {
+                    if (i >= 0) {
+                        typingElement.innerHTML = messages[index].substring(0, i);
+                        i--;
+                        setTimeout(erase, 50);
+                    } else {
+                        currentIndex = (currentIndex + 1) % messages.length;
+                        setTimeout(() => typeMessage(currentIndex), 500);
+                    }
+                }
+
+                erase();
+            }
+
+            typeMessage(currentIndex);
+        });
+
+        // Upload Button Click Event
+        document.querySelector(".upload-btn").addEventListener("click", function () {
+            alert("Upload functionality will be implemented soon!");
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

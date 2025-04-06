@@ -1,0 +1,87 @@
+/* General Styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1e1e1e;
+    color: white;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #000;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: rgb(76, 158, 178);
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+    height: 40vh;
+    /* Reduced height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('https://source.unsplash.com/1600x900/?ai,technology') no-repeat center/cover;
+}
+
+/* Intro Message */
+.intro-message {
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 20px;
+    color: rgb(77, 166, 176);
+    margin-top: -20px;
+    /* Adjusted for reduced spacing */
+}
+
+.intro-message h3 {
+    font-size: 24px;
+    color: rgb(77, 166, 176);
+}
+
+.intro-message p {
+    font-size: 18px;
+    width: 70%;
+    margin: auto;
+    line-height: 1.5;
+    color: white;
+}
+
+/* Centering the image */
+.intro-image {
+    display: block;
+    width: 60%;
+    /* Adjust width as needed */
+    max-width: 500px;
+    /* Prevent it from getting too large */
+    margin: 20px auto;
+    /* Centers the image */
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background: black;
+    padding: 10px 0;
+    margin-top: 100px;
+}

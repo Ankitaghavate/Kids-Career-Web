@@ -1,0 +1,69 @@
+/* Custom styles */
+body {
+    background-color: #f8f9fa;
+}
+
+.login-form {
+    background-color: #fff;
+    max-width: 400px;
+    width: 100%;
+}
+
+.animate-border {
+    position: relative;
+    overflow: hidden;
+}
+
+.animate-border::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #0d6efd, transparent);
+    animation: border-animation 2s linear infinite;
+}
+
+@keyframes border-animation {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+.form-control {
+    border-radius: 25px;
+    padding: 10px 15px;
+    transition: all 0.3s ease;
+}
+
+.form-control:hover {
+    border-color: #0d6efd;
+    box-shadow: 0 0 5px rgba(13, 110, 253, 0.5);
+}
+
+.sky-button {
+    background-color: #0d6efd;
+    border: none;
+    border-radius: 25px;
+    padding: 10px;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.sky-button:hover {
+    background-color: #0b5ed7;
+    transform: scale(1.05);
+}
+
+.toggle-password {
+    cursor: pointer;
+    color: #0d6efd;
+}
+
+.toggle-password:hover {
+    color: #0b5ed7;
+}

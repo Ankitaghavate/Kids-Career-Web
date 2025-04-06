@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Career Paths</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #b08a1c;
+            color: white;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .container {
+            padding: 50px;
+        }
+        .career-card {
+            background-color: white;
+            color: black;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .career-card img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container text-center">
+        <h1>Explore Career Paths</h1>
+        <p>Unleash your potential by discovering the diverse career opportunities that await you.</p>
+        
+        <div class="career-card">
+            <img src="{{ url_for('static', filename='src/image/doctor.webp') }}" class="card-img-top" alt="Music">
+              <div>
+                <h3>Becoming a Doctor</h3>
+                <p>The path to becoming a doctor is a rewarding journey filled with learning and dedication. It involves years of education, including high school, college, and medical school, followed by residency training.</p>
+            </div>
+        </div>
+
+        <div class="career-card">
+            <img src="{{ url_for('static', filename='src/image/engineer.webp') }}" class="card-img-top" alt="Music">
+            <div>
+                <h3>Engineering Adventures</h3>
+                <p>Engineering is a field that combines creativity and problem-solving to design solutions for real-world challenges, whether it's building bridges, creating software, or developing new technologies.</p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

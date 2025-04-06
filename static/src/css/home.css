@@ -1,0 +1,212 @@
+body {
+    background-color: rgb(197, 205, 221);
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+.nav-link {
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+    color: darkblue !important;
+    transform: scale(1.1);
+}
+
+/* Typing animation */
+.typing-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: darkblue;
+    text-align: center;
+    margin-top: 20px;
+    min-height: 30px;
+}
+
+/* Main Content Section */
+.content-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    padding: 40px;
+}
+
+.content-text {
+    flex: 1;
+    text-align: left;
+    max-width: 500px;
+    padding-left: 150px;
+    /* Added left padding */
+}
+
+.big-text {
+    font-size: 40px;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.black-text {
+    color: black;
+}
+
+.colored-text {
+    color: #0073e6;
+}
+
+.small-text {
+    font-size: 16px;
+    color: gray;
+    margin-bottom: 20px;
+}
+
+/* Upload Button */
+.upload-btn {
+    background-color: blue;
+    color: white;
+    font-size: 18px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+    padding-left: 20px;
+    /* Added left padding */
+}
+
+.upload-btn:hover {
+    background-color: darkblue;
+    color: white;
+}
+
+.content-image {
+    flex: 1;
+    width: 400px;
+    /* Increased width */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    margin-left: 40px;
+    margin-right: 80px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .content-image {
+        width: 90%;
+        /* Make it larger on smaller screens */
+        max-width: 500px;
+        /* Adjust the max size */
+        margin: 20px auto;
+        /* Center it */
+    }
+}
+
+.content-text {
+    max-width: 80%;
+    text-align: center;
+    padding-left: 10px;
+    /* Remove padding for mobile */
+}
+
+.how-it-works {
+    text-align: center;
+    margin-top: 50px;
+    padding: 40px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.how-it-works h2 {
+    font-size: 32px;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.description {
+    font-size: 18px;
+    color: gray;
+    margin-bottom: 30px;
+}
+
+.steps-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.step {
+    flex: 1;
+    min-width: 250px;
+    margin: 10px;
+    padding: 20px;
+    background-color: rgb(240, 240, 240);
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.step h3 {
+    font-size: 22px;
+    color: #0073e6;
+    margin-bottom: 10px;
+}
+
+.step p {
+    font-size: 16px;
+    color: black;
+}
+
+.footer {
+    background-color: #212529;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    height: auto;
+    margin-top: 50px;
+}
+
+.footer-text {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.footer a {
+    color: #0d6efd;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.footer-column {
+    margin: 10px 20px;
+    text-align: left;
+}
+
+.footer-column h5 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin: 5px 0;
+}

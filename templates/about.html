@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deep Fake Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='src/css/about.css') }}">
+    <script src="{{ url_for('static', filename='src/js/about.js') }}" defer></script>
+    <style>
+        .typing-container {
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        .typing-effect {
+            font-size: 28px;
+            font-weight: bold;
+            color: rgb(89, 112, 155);
+            white-space: nowrap;
+            overflow: hidden;
+            display: inline-block;
+            border-right: 2px solid black;
+            padding-right: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <h1 class="logo">Deep Fake Detection</h1>
+        </div>
+    </nav>
+
+    <!-- Typing Effect Messages -->
+    <div class="typing-container">
+        <h2 id="typing-text" class="typing-effect"></h2>
+    </div>
+
+    <!-- Intro Message -->
+    <section class="intro-message">
+        <h3>What is Deep Fake Detection?</h3>
+        <p>
+            Deep Fake Detection is a technology used to identify <strong>synthetically generated</strong> videos,
+            images, or audio created using artificial intelligence. Deep fakes can manipulate reality by superimposing
+            faces or altering voices, making it difficult to distinguish real from fake content.
+        </p>
+        <p>
+            Modern <strong>AI algorithms</strong> analyze features such as <strong>blinking patterns, inconsistencies in
+                lighting, and unnatural facial movements</strong> to determine whether a media file has been altered.
+        </p>
+    </section>
+    <img src="{{ url_for('static', filename='src/image/image1.webp') }}" alt="Deep Fake Detection" class="intro-image">
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Deep Fake Detection | All Rights Reserved</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const messages = [
+                "AI-Powered Fake Detection",
+                "Detect Fake Media with AI",
+                "Ensure Authenticity & Security"
+            ];
+            let messageIndex = 0;
+            const textElement = document.getElementById("typing-text");
+
+            function typeMessage(text, speed, callback) {
+                let i = 0;
+                textElement.textContent = ""; // Clear text before typing
+                function type() {
+                    if (i < text.length) {
+                        textElement.textContent += text.charAt(i);
+                        i++;
+                        setTimeout(type, speed);
+                    } else if (callback) {
+                        setTimeout(callback, 2000); // Pause before next message
+                    }
+                }
+                type();
+            }
+
+            function startTypingLoop() {
+                typeMessage(messages[messageIndex], 100, function () {
+                    messageIndex = (messageIndex + 1) % messages.length;
+                    setTimeout(startTypingLoop, 500); // Delay before switching messages
+                });
+            }
+
+            startTypingLoop();
+        });
+    </script>
+</body>
+
+</html>
