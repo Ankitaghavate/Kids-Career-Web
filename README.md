@@ -18,24 +18,19 @@ This web application is designed to help students explore multiple career option
   - `google-generativeai` for AI-based chatbot  
   - `gunicorn` for production server deployment  
 
-## 📦 Installation
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/kids-career-web.git
-   cd kids-career-web
-
 
 ---
 # 🌐 Live Demo
 Deployed on Render:- https://career-chatbot-1.onrender.com/
 
+## 📦 Installation
+
 ## 🛠️ How to Run This Project Locally
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/your-username/Fake-News-Detector.git
-cd Fake-News-Detector
+git clone https://github.com/Ankitaghavate/Kids-Career-Web.git
+cd Kids-Career-Web
 ```
 
 
