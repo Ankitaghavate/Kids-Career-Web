@@ -1,3 +1,1 @@
 flask
-render_template
-jsonify
